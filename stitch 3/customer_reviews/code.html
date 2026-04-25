@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Barber Owner - Reviews Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1a1a1a",
+                        "neutral-dark": "#2a2720",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto w-full">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Customer Reviews</h1>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-full size-10 hover:bg-primary/10 text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-md mx-auto w-full pb-24 overflow-y-auto no-scrollbar">
+<section class="p-6 bg-gradient-to-b from-primary/5 to-transparent">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="flex flex-col gap-1">
+<p class="text-primary text-6xl font-black leading-tight tracking-tighter">4.9</p>
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined !text-[22px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[22px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[22px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[22px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[22px] fill-1">star_half</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mt-2">Based on 128 reviews</p>
+</div>
+<div class="flex-1 w-full space-y-2">
+<div class="flex items-center gap-3">
+<span class="text-slate-600 dark:text-slate-400 text-xs font-bold w-3">5</span>
+<div class="flex-1 h-1.5 overflow-hidden rounded-full bg-slate-200 dark:bg-neutral-dark">
+<div class="h-full rounded-full bg-primary shadow-[0_0_8px_rgba(212,175,53,0.4)]" style="width: 85%;"></div>
+</div>
+<span class="text-slate-500 dark:text-slate-400 text-xs font-medium w-8 text-right">85%</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-slate-600 dark:text-slate-400 text-xs font-bold w-3">4</span>
+<div class="flex-1 h-1.5 overflow-hidden rounded-full bg-slate-200 dark:bg-neutral-dark">
+<div class="h-full rounded-full bg-primary" style="width: 10%;"></div>
+</div>
+<span class="text-slate-500 dark:text-slate-400 text-xs font-medium w-8 text-right">10%</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-slate-600 dark:text-slate-400 text-xs font-bold w-3">3</span>
+<div class="flex-1 h-1.5 overflow-hidden rounded-full bg-slate-200 dark:bg-neutral-dark">
+<div class="h-full rounded-full bg-primary/60" style="width: 2%;"></div>
+</div>
+<span class="text-slate-500 dark:text-slate-400 text-xs font-medium w-8 text-right">2%</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-slate-600 dark:text-slate-400 text-xs font-bold w-3">2</span>
+<div class="flex-1 h-1.5 overflow-hidden rounded-full bg-slate-200 dark:bg-neutral-dark">
+<div class="h-full rounded-full bg-primary/40" style="width: 1%;"></div>
+</div>
+<span class="text-slate-500 dark:text-slate-400 text-xs font-medium w-8 text-right">1%</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-slate-600 dark:text-slate-400 text-xs font-bold w-3">1</span>
+<div class="flex-1 h-1.5 overflow-hidden rounded-full bg-slate-200 dark:bg-neutral-dark">
+<div class="h-full rounded-full bg-primary/20" style="width: 2%;"></div>
+</div>
+<span class="text-slate-500 dark:text-slate-400 text-xs font-medium w-8 text-right">2%</span>
+</div>
+</div>
+</div>
+</section>
+<section class="px-4 pb-4">
+<div class="flex items-center justify-between mb-6 px-2">
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">Recent Feedback</h2>
+<button class="text-primary text-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">tune</span>
+                    Filter
+                </button>
+</div>
+<div class="space-y-4">
+<div class="bg-white dark:bg-neutral-dark/30 border border-slate-100 dark:border-primary/5 rounded-xl p-4 shadow-sm">
+<div class="flex items-start gap-3 mb-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-primary/20" data-alt="Portrait of a male customer with a stylish haircut" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCupHKHLfW54kDHSDrl6xp2C5y3FElpPz8MW0eMMvxmiP_BTIPinuk4-N3mwNlDrpqH4Y8ZCijUGDO9NvzQKQPDlzRXowK5RpUvoDOuOG9-FM12JUn3y80QgxnJF6ClPwXULG2V0JvhuqxOyJRMP8xD6YuWLHCVzkJqxEFCWmGZ3stYDO359AZ2vpjpgcLFrSyh7dpsv2uW9rq5cgtv89AJHOii1kTvcwpkAh6Vd1i11doLooeZgTK038OGZpwgHYk9kPnS4J8g_gg");'></div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold">James Wilson</p>
+<span class="text-slate-400 dark:text-slate-500 text-xs">2 days ago</span>
+</div>
+<div class="flex gap-0.5 text-primary my-1">
+<span class="material-symbols-outlined !text-[16px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[16px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[16px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[16px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[16px] fill-1">star</span>
+</div>
+</div>
+</div>
+<p class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                        Absolutely best skin fade I've ever had. Marcus has incredible attention to detail and took his time to make sure everything was perfect. The atmosphere is upscale but welcoming.
+                    </p>
+<div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-white/5">
+<div class="flex gap-4 text-slate-500">
+<button class="flex items-center gap-1.5 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+<span class="text-xs font-medium">12</span>
+</button>
+<button class="flex items-center gap-1.5 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+<span class="text-xs font-medium">Add Note</span>
+</button>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-background-dark px-4 py-1.5 rounded-lg text-xs font-bold transition-transform active:scale-95">
+                            Reply
+                        </button>
+</div>
+</div>
+<div class="bg-white dark:bg-neutral-dark/30 border border-slate-100 dark:border-primary/5 rounded-xl p-4 shadow-sm">
+<div class="flex items-start gap-3 mb-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-primary/20" data-alt="Close up portrait of a satisfied barber client" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCV3Pjc_qCZPMMwVTjLB9fAPCLTgwL3adZPeDSpHAZdmq91bwmHg2Gi3J-k743V-7eK__aSpyLvUzXpaPsbzL-s0qUPOsoNGbop8WIE8L0YO_c6B4bEoXqLE2LPSDnhlGKarXATVpoZABaJDiPvtyULK6z4GDTQ7yu7XeUoseH6vyLcdbo7BvE8DDg3pR84H74CwM_DncozFofkxBrh-gCE8jekh_Fw_zTkaEWyPloVd77v6UxvgshgMTHZHnETtSnJNLkgLdHjP9c");'></div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold">Marcus Chen</p>
+<span class="text-slate-400 dark:text-slate-500 text-xs">1 week ago</span>
+</div>
+<div class="flex gap-0.5 text-primary my-1">
+<span class="material-symbols-outlined !text-[16px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[16px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[16px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[16px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[16px] fill-1">star</span>
+</div>
+</div>
+</div>
+<p class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                        Great professional service. I found my new regular spot. The complimentary beverage and the hot towel finish really set this place apart from others.
+                    </p>
+<div class="bg-slate-50 dark:bg-white/5 rounded-lg p-3 mb-4 border-l-2 border-primary">
+<p class="text-[10px] uppercase font-bold text-primary tracking-wider mb-1">Your Reply</p>
+<p class="text-xs text-slate-600 dark:text-slate-400 italic">"Thanks Marcus! Glad you enjoyed the experience. See you next time for the trim!"</p>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-white/5">
+<div class="flex gap-4 text-slate-500">
+<button class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px] fill-1">thumb_up</span>
+<span class="text-xs font-medium">8</span>
+</button>
+</div>
+<button class="text-primary hover:text-primary/80 px-4 py-1.5 rounded-lg text-xs font-bold">
+                            Edit Reply
+                        </button>
+</div>
+</div>
+<div class="bg-white dark:bg-neutral-dark/30 border border-slate-100 dark:border-primary/5 rounded-xl p-4 shadow-sm opacity-90">
+<div class="flex items-start gap-3 mb-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-primary/20" data-alt="Portrait of a customer looking at camera" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCDViIvCS_hbgl76a5QNX89Z_X5v3L2H6zCpgup7cUcR5tPuE07Dg6YRKWCWeZVpkmXBijqMVFekptl-29TZpFnvVN42hamSRgGa13qT-FWIfkgKzyODX7xWzRUstvcjyeVRKL8C9zs2Lu_hTHnlcwSwy9eoKOUaaou1YPruaZ8px65aDT2WgdpwPcwKka7vYJap2nmNm9OsqxPlvnAwwamnJPs7LFsSJVK8nfYjC5vACLTHdPQKrec_zGcHnPGNNOs33I0G4-8KTk");'></div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold">David Thompson</p>
+<span class="text-slate-400 dark:text-slate-500 text-xs">2 weeks ago</span>
+</div>
+<div class="flex gap-0.5 text-primary my-1">
+<span class="material-symbols-outlined !text-[16px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[16px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[16px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[16px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[16px]">star</span>
+</div>
+</div>
+</div>
+<p class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                        Solid cut, just a bit of a wait even with an appointment. Quality is top notch though, will be back.
+                    </p>
+<div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-white/5">
+<div class="flex gap-4 text-slate-500">
+<button class="flex items-center gap-1.5 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+<span class="text-xs font-medium">4</span>
+</button>
+</div>
+<button class="bg-primary text-background-dark px-4 py-1.5 rounded-lg text-xs font-bold">
+                            Reply
+                        </button>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 py-3 text-slate-500 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors">
+                View all 128 reviews
+            </button>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-primary/10 px-4 pb-6 pt-3 z-20 max-w-md mx-auto">
+<div class="flex gap-2">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">content_cut</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Services</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<div class="relative">
+<span class="material-symbols-outlined fill-1">reviews</span>
+<span class="absolute -top-1 -right-1 size-2 bg-red-500 rounded-full border-2 border-background-dark"></span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Reviews</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Clients</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Settings</p>
+</a>
+</div>
+</nav>
+</body></html>

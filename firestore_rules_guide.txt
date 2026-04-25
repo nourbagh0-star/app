@@ -1,0 +1,27 @@
+# Firestore Security Rules Guide
+
+We have replaced the permissive default Firestore rules (`allow read, write: if true;`) with a production-ready ruleset tailored to this Barber Booking Platform.
+
+## The new `firestore.rules` enforce the following access control architecture:
+
+### 1. User Profiles (`/users/{userId}`)
+*   **Creation:** Authenticated users can create their profiles after logging in.
+*   **Privacy:** Users can only read and update **their own** user document (`request.auth.uid == userId`). No user can read another's PII unless through an admin override.
+
+### 2. Shops & Catalogs (`/shops/{shopId}`)
+*   **Visibility:** All authenticated users (Customers included) can read Shops, Services, and Staff lists to populate the Home Screen and Shop Profile screens.
+*   **Management:** Only users with `role == 'barber'` who are the assigned `ownerId` of the shop can update shop details, or add/edit items within the `/services` and `/barbers` subcollections.
+
+### 3. Bookings (`/bookings/{bookingId}`)
+*   **Creation:** Only authenticated customers can create bookings. The `customerId` in the payload must strictly match their Auth token UID (`request.auth.uid`).
+*   **Modifications:** Customers can only update (e.g., reschedule or cancel) their own bookings. Barbers have broader update rights to manage the lifecycle (confirm, mark completed).
+*   **Deletions:** Hard deletions are explicitly blocked (`allow delete: if false`). History is maintained by changing the status to `'canceled'`.
+
+## Deployment Steps
+To apply these rules to your remote Firebase project:
+
+1.  Make sure you have the Firebase CLI installed (`npm install -g firebase-tools`).
+2.  Run `firebase login` if not already authenticated.
+3.  Run `firebase deploy --only firestore:rules` from your project root.
+
+Alternatively, you can copy the contents of `firestore.rules` and paste them directly into the **Rules** tab of your Firestore Database console at https://console.firebase.google.com.

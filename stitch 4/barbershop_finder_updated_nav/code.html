@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1a1a1a",
+                        "neutral-dark": "#2a271d",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .map-gradient {
+            background: radial-gradient(circle at center, transparent 0%, rgba(26, 26, 26, 0.8) 100%);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Interactive Map Background -->
+<div class="absolute inset-0 z-0 bg-neutral-dark/30">
+<div class="absolute inset-0 map-gradient z-10"></div>
+<img class="w-full h-full object-cover opacity-40 grayscale contrast-125" data-alt="Dark stylized city map with gold accents" data-location="New York City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjngYXSjU1Hgorv-aw6dUoevgqQQeZ-Xw38Xmy85gDZ5RAh5huvophsgKTidZLiXJC0b3pOpQVMLhWnRQ_GjfW73U7FvMPwFAxU5Ti_K_aJSi9QJo_CJxfwZyj7noSNpR464VxdcRUWyXud0jDdixtyMUJod587YULWpF8O1p7N20gpNn2SZdU8ddeS3FFg8POT--JPjdgy2WzRHfMbzpesRfKgvassjpFmsEYky2TYFnrz90ZkhB_a8OV19vsmBaFx-d5pCx2PgQ"/>
+<!-- Custom Gold Barber Pole Pins -->
+<div class="absolute top-1/3 left-1/4 z-20 group cursor-pointer">
+<div class="flex flex-col items-center">
+<div class="bg-primary p-1.5 rounded-full shadow-[0_0_15px_rgba(212,175,53,0.6)] border-2 border-background-dark">
+<span class="material-symbols-outlined text-background-dark text-sm font-bold">content_cut</span>
+</div>
+<div class="w-0.5 h-3 bg-primary"></div>
+</div>
+</div>
+<div class="absolute top-1/2 left-1/2 z-20 group cursor-pointer">
+<div class="flex flex-col items-center">
+<div class="bg-primary p-1.5 rounded-full shadow-[0_0_15px_rgba(212,175,53,0.6)] border-2 border-background-dark scale-125">
+<span class="material-symbols-outlined text-background-dark text-sm font-bold">content_cut</span>
+</div>
+<div class="w-0.5 h-3 bg-primary"></div>
+</div>
+</div>
+<div class="absolute bottom-1/3 right-1/4 z-20 group cursor-pointer">
+<div class="flex flex-col items-center">
+<div class="bg-primary p-1.5 rounded-full shadow-[0_0_15px_rgba(212,175,53,0.6)] border-2 border-background-dark">
+<span class="material-symbols-outlined text-background-dark text-sm font-bold">content_cut</span>
+</div>
+<div class="w-0.5 h-3 bg-primary"></div>
+</div>
+</div>
+</div>
+<!-- Top Header & Search -->
+<div class="relative z-30 p-4 pt-8">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+</div>
+<h1 class="text-primary text-xl font-extrabold tracking-widest uppercase">Aureum</h1>
+<div class="size-10 rounded-full border border-primary/30 overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a stylish man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAwj4Z_i9Qrjj9rYyX_3CcPA1m2bot8hA5Jg_dEW6Yr5VQwdcQNMfdtoAIzb9WG7gqIFGarwYyRV3S1ZWJS__otirqiZBZXcxGR52orJddc5yjl-_PnxmRktn7snXrBpV1IQRbWe7mCQ1PJdoYIPl1vnO0F5IC0Y90ZTibSkaphsTTraojvpjG9Hioa9SOKrGZb6yZ7G7Kria0e7I38umPlMQ1EHEJESrQZ-3dYZay-bO91AucwG1I6rZvrMm5c6_E1q65xteC2LQ"/>
+</div>
+</div>
+<div class="relative flex items-center bg-background-dark/80 backdrop-blur-md rounded-xl border border-primary/20 px-4 py-3 shadow-2xl">
+<span class="material-symbols-outlined text-primary mr-3">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-slate-100 placeholder:text-slate-500 w-full text-sm font-medium" placeholder="Find your master barber..." type="text"/>
+<span class="material-symbols-outlined text-primary ml-2">tune</span>
+</div>
+</div>
+<!-- Middle Controls -->
+<div class="relative z-30 flex flex-col items-end gap-3 px-4 mt-auto mb-4">
+<button class="size-11 flex items-center justify-center rounded-xl bg-background-dark/90 border border-primary/30 text-primary shadow-xl">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+<div class="flex flex-col rounded-xl bg-background-dark/90 border border-primary/30 overflow-hidden shadow-xl">
+<button class="size-11 flex items-center justify-center text-primary border-b border-primary/10">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="size-11 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+</div>
+<!-- Floating Carousel -->
+<div class="relative z-30 mb-6">
+<div class="flex overflow-x-auto gap-4 px-4 pb-4 no-scrollbar scroll-smooth">
+<!-- Shop Card 1 -->
+<div class="min-w-[280px] bg-background-dark/95 backdrop-blur-md rounded-2xl border border-primary/20 overflow-hidden shadow-2xl flex flex-col">
+<div class="relative h-32 w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Interior of a luxury modern barbershop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgZK-hhlGO-CSF936SAjLXCv5RKc2tlDbZ_VyiI2Be051mXrByUXmngF5n6zUxbETAyvg4WPIObO3CSTGOLcELnn62H2oET79HdYWQSBedpyywuML_sETXVAxGGk9YbLgAghRzXy4OZ1MEDa0ZsFgLeJ3LGVRQpbGZekmAShgmea5IgLr_iFwXioOOMh2tWZIWXKqIHZT3CuBfRRmIU8Kyjvbb1gHFliEzvYV76DEpruC7uIDQjMjYvBzYgcP5VjoWPRoC4luzPv4"/>
+<div class="absolute top-2 right-2 bg-background-dark/60 backdrop-blur-sm rounded-lg px-2 py-1 flex items-center gap-1 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-xs fill-1">star</span>
+<span class="text-xs font-bold text-slate-100">4.9</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-primary font-bold text-lg leading-tight">The Gilded Razor</h3>
+<p class="text-slate-400 text-xs flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                                    0.4 miles away • Upper East Side
+                                </p>
+</div>
+</div>
+<button class="w-full py-2.5 bg-primary rounded-lg text-background-dark font-bold text-sm tracking-wide uppercase transition-transform active:scale-95 shadow-[0_4px_15px_rgba(212,175,53,0.3)]">
+                            Book Now
+                        </button>
+</div>
+</div>
+<!-- Shop Card 2 -->
+<div class="min-w-[280px] bg-background-dark/95 backdrop-blur-md rounded-2xl border border-primary/10 overflow-hidden shadow-2xl flex flex-col opacity-90">
+<div class="relative h-32 w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Barber cutting hair with gold scissors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNfKTYFzt1wbOCJhmDthMBCQ1INsR8ZhpIzlJku_ERUtSvBZTAW7njxKQOhqNzp9SW1ym8GaoJ3CMK8M-0U7M3pTBERHE2J3pxJ1QHVcMDTz82p1psnMMtsYFXOPlToTJDmNOcDHz8eVrzsQpoP9PUYu-m1oicq8g1fchjdNGQjVP9VxAyUk32HVn_hZQmY7S2hLGSA6f8uaLmIxxsfSiGrucmVrIbqkcjmFrjL41jSaC2YPXGiVWGd2SFJIWqjv3zyOscphTKtlg"/>
+<div class="absolute top-2 right-2 bg-background-dark/60 backdrop-blur-sm rounded-lg px-2 py-1 flex items-center gap-1 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-xs fill-1">star</span>
+<span class="text-xs font-bold text-slate-100">4.8</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-primary font-bold text-lg leading-tight">Elite Cuts &amp; Co.</h3>
+<p class="text-slate-400 text-xs flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                                    1.2 miles away • Manhattan
+                                </p>
+</div>
+</div>
+<button class="w-full py-2.5 bg-primary rounded-lg text-background-dark font-bold text-sm tracking-wide uppercase shadow-[0_4px_15px_rgba(212,175,53,0.3)]">
+                            Book Now
+                        </button>
+</div>
+</div>
+<!-- Shop Card 3 -->
+<div class="min-w-[280px] bg-background-dark/95 backdrop-blur-md rounded-2xl border border-primary/10 overflow-hidden shadow-2xl flex flex-col opacity-90">
+<div class="relative h-32 w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up of high-end barber tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6bJ191Km-SRHF0H6ZPslHIQnQek4njLz2byLmDpCEI7Q1is8XjzQcJbrjIMjQMKIu2IRmDwuvvmzEkkE0JfXTVXmPyTniU_Ml5Mv_yaZjI1m5S_5SKZWnrYl6qJG3YY-FE0--diUW7RaY1VEwIX0Hk4Ren79cPj-YYeuJ8Az8pQZ6_WgCEP0DTReGSNTCqrr86QjWU1ChmyLaRiEvit9VvX5HeCZ6ihP63CRVyA6nynlq-zJnFoNeVrlkyMhqsFvaZ4PhmE6zbK0"/>
+<div class="absolute top-2 right-2 bg-background-dark/60 backdrop-blur-sm rounded-lg px-2 py-1 flex items-center gap-1 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-xs fill-1">star</span>
+<span class="text-xs font-bold text-slate-100">5.0</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-primary font-bold text-lg leading-tight">Imperial Grooming</h3>
+<p class="text-slate-400 text-xs flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                                    2.5 miles away • Chelsea
+                                </p>
+</div>
+</div>
+<button class="w-full py-2.5 bg-primary rounded-lg text-background-dark font-bold text-sm tracking-wide uppercase shadow-[0_4px_15px_rgba(212,175,53,0.3)]">
+                            Book Now
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Nav Bar -->
+<div class="relative z-40 bg-background-dark/90 backdrop-blur-xl border-t border-primary/20 px-6 py-4">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 0">home</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Home</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1">explore</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Explore</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 0">calendar_today</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Bookings</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 0">person</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Profile</p>
+</a>
+</div>
+</div>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

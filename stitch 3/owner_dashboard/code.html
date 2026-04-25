@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Barber Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-card {
+            background: rgba(212, 175, 53, 0.05);
+            border: 1px solid rgba(212, 175, 53, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display">
+<!-- Header Section -->
+<header class="flex items-center justify-between p-6 pt-8">
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-full border-2 border-primary overflow-hidden p-0.5">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Professional barber shop manager portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDs22U3sf2mFBIPmERMEf5EyXlLzZqHIH6St5M4TmP2RfrGC3XDof36TxKwHqE25T7z7EZbNUEPPq67ByVG4SSt5t1z3R3SCqolxXMtUq3UMwQQQwuIvyokwAKDGS4aMOkH_u3ZYfEDJkdRBtmvtbeNScrkR6Y6z5Kj2Wk2fsIbmFxRq7vt155oOMS6xg8eW-096Do3E51j6aQsrkuZH4RSEjqO18ahNWkkc5fx1DdvfhpYhvWL_ITc5eywkeUxykaJdElizjspXEY')">
+</div>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-medium uppercase tracking-widest">Store Manager</p>
+<h1 class="text-lg font-bold">The Royal Cut</h1>
+</div>
+</div>
+<button class="size-10 flex items-center justify-center rounded-xl bg-slate-800/50 border border-slate-700/50">
+<span class="material-symbols-outlined text-primary">notifications</span>
+</button>
+</header>
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Stats Section -->
+<div class="px-6 grid grid-cols-2 gap-4">
+<div class="glass-card rounded-2xl p-5 flex flex-col gap-3">
+<div class="size-10 rounded-lg bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">payments</span>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-medium">Today's Earnings</p>
+<div class="flex items-end gap-2">
+<h2 class="text-2xl font-extrabold">$1,240</h2>
+<span class="text-[10px] font-bold text-emerald-400 pb-1">+12%</span>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-2xl p-5 flex flex-col gap-3">
+<div class="size-10 rounded-lg bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-medium">Appointments</p>
+<div class="flex items-end gap-2">
+<h2 class="text-2xl font-extrabold">18</h2>
+<span class="text-[10px] font-bold text-emerald-400 pb-1">+5%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Performance Chart Placeholder -->
+<div class="mx-6 mt-6 p-6 rounded-2xl glass-card relative overflow-hidden">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-bold">Weekly Performance</h3>
+<span class="text-xs text-primary font-medium">View Report</span>
+</div>
+<div class="h-32 w-full flex items-end justify-between gap-2">
+<div class="w-full bg-primary/10 rounded-t-lg h-2/3"></div>
+<div class="w-full bg-primary/10 rounded-t-lg h-1/2"></div>
+<div class="w-full bg-primary/10 rounded-t-lg h-3/4"></div>
+<div class="w-full bg-primary/40 rounded-t-lg h-2/5"></div>
+<div class="w-full bg-primary/60 rounded-t-lg h-5/6"></div>
+<div class="w-full bg-primary rounded-t-lg h-full"></div>
+<div class="w-full bg-primary/20 rounded-t-lg h-3/5"></div>
+</div>
+</div>
+<!-- Appointments List -->
+<div class="mt-8 px-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold">Upcoming Today</h3>
+<button class="text-xs text-primary font-semibold">See All</button>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Appointment Item 1 -->
+<div class="bg-slate-800/30 border border-slate-700/30 rounded-2xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="size-14 rounded-xl bg-cover bg-center" data-alt="Customer Alexander Pierce profile photo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7dhIttwW6h3tGeWNxcNf4hkMpnsP5MdeZl3N7iElpGGgdX2omSEsqp2VdQZT_p5Jl6pwkW2pkYU0Nx6VFvfCIROApAmdNgb34brmWlD1E_fJIGaR3a0_AskE2JohqYo_4fmElHNEcfgaCVjJ0PeXIE4xO3KEKROsSPwCdeeiArWmfuJp69RggIXabOWRPOSUQtQHYaIeqwydnXZUjlFH-clTiKT6eyZsy5VYt5BZR-oNYRJdDcc_ig6oWW9bP0_4jc-t98inhTPg')">
+</div>
+<div class="absolute -bottom-1 -right-1 size-5 rounded-full bg-primary border-2 border-background-dark flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-background-dark font-bold">check</span>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-slate-100">Alexander Pierce</h4>
+<p class="text-xs text-slate-400 font-medium">Classic Fade • Barber: Marco</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary text-xs">schedule</span>
+<span class="text-[11px] text-primary font-bold">10:30 AM - 11:15 AM</span>
+</div>
+</div>
+</div>
+<button class="size-10 rounded-full flex items-center justify-center text-slate-500">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<!-- Appointment Item 2 -->
+<div class="bg-slate-800/30 border border-slate-700/30 rounded-2xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="size-14 rounded-xl bg-cover bg-center" data-alt="Customer Julian Smith profile photo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUl6aPjX4KQaBN9X4AyEBGTyvhvp8vaF3br95fD0pskBGfkSH_roWp-29ahkO7JzLeoskbJvhviaI6wUsvcy2vMJQt2G9-8CFMk92Fv03K0df90dg0bREq29kkN2ZmsrOJj7E3-dvYBK-Vvto2E20f9PjlZMyp4zH6HhwmMya5zsnTd2O-yTfaTat9fxnaFsFlFeF0LxFvJZLyH3Zp_15YseFLFQQg9zMraaqX_PBcS5bZdsMRQnJd7M6ZYENpI4c-0tTYLxD0oY8')">
+</div>
+</div>
+<div>
+<h4 class="font-bold text-slate-100">Julian Smith</h4>
+<p class="text-xs text-slate-400 font-medium">Beard Trim • Barber: Leo</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-slate-400 text-xs">schedule</span>
+<span class="text-[11px] text-slate-400 font-bold">11:30 AM - 12:00 PM</span>
+</div>
+</div>
+</div>
+<button class="size-10 rounded-full flex items-center justify-center text-slate-500">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<!-- Appointment Item 3 -->
+<div class="bg-slate-800/30 border border-slate-700/30 rounded-2xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="size-14 rounded-xl bg-cover bg-center" data-alt="Customer Nathan Drake profile photo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQjA4hZ59rR57hNzYGlzDxWt_VNs01ysOjeA5qAtkea4HRhsrafkJhlm22cqFNNYaSQa6FjVKdzBydsmuI077v6VNeddMHdm4KNP5RxtY0G648C1F1He_87-vlv6tvF_JbwBkEahpzaWzeeC9Jxth3zZI_IxMOY9n8DxmMP8flF8DawQ7ThxU62i_fY9rcDW6E4ZGIm7cZeK1gT_fyGbjdS1gXlWpsZtbSsD1VrKK2VnfyqohlOrgLkXAxRLDOFUT3yswJQ6t0B4A')">
+</div>
+</div>
+<div>
+<h4 class="font-bold text-slate-100">Nathan Drake</h4>
+<p class="text-xs text-slate-400 font-medium">Buzz Cut • Barber: Marco</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-slate-400 text-xs">schedule</span>
+<span class="text-[11px] text-slate-400 font-bold">01:15 PM - 02:00 PM</span>
+</div>
+</div>
+</div>
+<button class="size-10 rounded-full flex items-center justify-center text-slate-500">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-dark/80 backdrop-blur-xl border-t border-slate-800/50 px-6 pb-6 pt-3 z-50">
+<div class="flex items-center justify-between max-w-lg mx-auto">
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="size-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary mb-1">
+<span class="material-symbols-outlined font-bold">dashboard</span>
+</div>
+<span class="text-[10px] font-bold text-primary tracking-tight">Dashboard</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="size-10 flex items-center justify-center text-slate-500 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">storefront</span>
+</div>
+<span class="text-[10px] font-bold text-slate-500 tracking-tight">My Shop</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="size-10 flex items-center justify-center text-slate-500 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<span class="text-[10px] font-bold text-slate-500 tracking-tight">Schedule</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="size-10 flex items-center justify-center text-slate-500 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">person</span>
+</div>
+<span class="text-[10px] font-bold text-slate-500 tracking-tight">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

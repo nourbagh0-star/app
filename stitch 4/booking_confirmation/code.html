@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4af35 0%, #f1d592 50%, #b8860b 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto overflow-x-hidden border-x border-slate-200 dark:border-slate-800 shadow-2xl">
+<!-- Top Navigation -->
+<div class="flex items-center p-6 pb-2 justify-between sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10">
+<div class="text-slate-900 dark:text-white flex size-10 items-center justify-center rounded-full glass-card cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">Confirm Booking</h2>
+<div class="size-10"></div> <!-- Placeholder for symmetry -->
+</div>
+<div class="flex flex-col gap-6 p-6 overflow-y-auto pb-32">
+<!-- Service Summary Card -->
+<div class="group relative overflow-hidden rounded-2xl glass-card transition-all duration-300">
+<div class="absolute inset-0 opacity-20 gold-gradient blur-3xl -z-10"></div>
+<div class="aspect-[16/10] w-full bg-cover bg-center" data-alt="Luxury barbershop interior with vintage leather chairs" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHGJ2zZCg3lqErall8-U7tc7LEG4fOPhYQ3N-1MMLHUNsR253b5jEfN5ymPm6yABOoXOuNOznzm9iHUP4vhejqmok0Qq51L7Hgcjo6ilx0_BMw4MyBX67vP-pCdS72OfrGV5zPmdseN66w9zunck6dhrjyb1k5-0TTS4a0skcEzShnbskm1ZNhWfWzibXOpxyK5W38tFbj0dIWyT9cr2lLR5X1rASfGdpgrFVDPurHm9XQGz59s7_0WaHZKrGLdLc-B7o8_lc0OA4");'></div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div>
+<span class="text-primary text-[10px] uppercase tracking-[0.2em] font-bold">Premium Service</span>
+<h3 class="text-white text-xl font-bold mt-1">Gentleman's Royal Treatment</h3>
+</div>
+<div class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold border border-primary/30">
+                            $85.00
+                        </div>
+</div>
+<div class="flex items-center gap-2 text-slate-400 text-sm">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="truncate">The Golden Scissors • 5th Avenue, NYC</span>
+</div>
+</div>
+</div>
+<!-- Detail Sections -->
+<div class="flex flex-col gap-4">
+<h4 class="text-slate-500 dark:text-slate-400 text-xs uppercase tracking-widest font-bold ml-1">Appointment Details</h4>
+<!-- Barber -->
+<div class="flex items-center gap-4 glass-card p-4 rounded-xl border border-white/5">
+<div class="size-14 rounded-full overflow-hidden border-2 border-primary/30 shrink-0">
+<img class="w-full h-full object-cover" data-alt="Professional barber portrait looking confident" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmP2ytMa2dPbkAde3i9e8fAM6h-h_5ZziagrKNrjDxuYEFjrO2GQE4u3bsN6bPlScxJPUGABesQDr1GF1p-mww9EVWYoIqotsFGFRSMKDWEO8nO4H8kH0iWbodUd2cOE-jBc3DBJr_5JuPkujL3jMa76wk90WwfHujPeYxFgzrFVDFHHUkjFAxzeBqxedZA4H9_3e377qiiV9tZ6o4AUc-dvMM1QRHbqvGQ0ivjaeH_GLTB__-xspiBUiwRin0Tf0VVMSerx9fYJg"/>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-white text-base font-bold">Alex Rivera</p>
+<p class="text-slate-400 text-sm">Master Stylist &amp; Grooming Expert</p>
+</div>
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+<!-- Schedule -->
+<div class="flex items-center gap-4 glass-card p-4 rounded-xl border border-white/5">
+<div class="size-14 rounded-xl bg-primary/10 flex flex-col items-center justify-center shrink-0 border border-primary/20">
+<span class="text-[10px] uppercase font-bold text-primary">Oct</span>
+<span class="text-xl font-black text-white">24</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-white text-base font-bold">Thursday, October 24</p>
+<p class="text-slate-400 text-sm">Starts at 02:30 PM (60 min)</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">calendar_today</span>
+</div>
+</div>
+<!-- Pricing Summary -->
+<div class="flex flex-col gap-4">
+<h4 class="text-slate-500 dark:text-slate-400 text-xs uppercase tracking-widest font-bold ml-1">Payment Summary</h4>
+<div class="glass-card rounded-2xl p-6 border border-white/5 space-y-4">
+<div class="flex justify-between text-slate-400 text-sm">
+<span>Royal Treatment Service</span>
+<span class="text-white">$75.00</span>
+</div>
+<div class="flex justify-between text-slate-400 text-sm">
+<span>Hot Towel &amp; Finish</span>
+<span class="text-white">$10.00</span>
+</div>
+<div class="flex justify-between text-slate-400 text-sm">
+<span>Booking Fee</span>
+<span class="text-primary">FREE</span>
+</div>
+<div class="pt-4 border-t border-white/10 flex justify-between items-end">
+<span class="text-white font-bold">Total Amount</span>
+<div class="flex flex-col items-end">
+<span class="text-2xl font-black text-primary">$85.00</span>
+<span class="text-[10px] text-slate-500 italic">Taxes included</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Map View (Mini) -->
+<div class="rounded-2xl h-32 overflow-hidden relative glass-card">
+<img class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-700" data-alt="Abstract map of New York City streets" data-location="New York City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX_pzCt15G3a8DJS_aOkKSTBpNeUh6BghqYWJOhrB8wLJaCfGFcqy8aN3TRoljoP1Zb6uWNAGPdlIIP-VguSFaxLCMhlRA1fmLXRw0MEYt5k7Lrq1dvuVv7zsqk4cIdRAJIU0i_cjbj5iQM8ibTKHWYPDyANHjVZpvxXHb-9b5b966SWJD0j4iEG_RXxDfv0pdnRsOBThDkBU7G1RtFCkgc6-Fuk0_bIZ5d4V_dlU6X8xNSX53K_0MvkKDAGsi1LGDKNLmCTv451Q"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-background-dark/80 backdrop-blur-sm px-4 py-2 rounded-full border border-primary/30 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">near_me</span>
+<span class="text-xs font-bold text-white">Show Route</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-dark via-background-dark to-transparent pt-12">
+<button class="w-full gold-gradient hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 h-16 rounded-2xl flex items-center justify-center gap-3 shadow-[0_10px_30px_rgba(212,175,53,0.3)] group">
+<span class="text-background-dark font-black text-lg tracking-tight uppercase">Confirm and Book</span>
+<span class="material-symbols-outlined text-background-dark font-bold group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<p class="text-center text-[10px] text-slate-500 mt-4 leading-relaxed">
+                By tapping confirm, you agree to our <span class="text-primary underline">Cancellation Policy</span> and <span class="text-primary underline">Terms of Service</span>.
+            </p>
+</div>
+</div>
+</body></html>

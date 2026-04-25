@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Barber Booking UI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#d4af35",
+                "background-light": "#f8f7f6",
+                "background-dark": "#1A1A1A",
+              },
+              fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex h-screen w-full max-w-md mx-auto flex-col bg-background-light dark:bg-background-dark overflow-hidden shadow-2xl">
+<!-- Header -->
+<div class="flex items-center p-6 justify-between border-b border-primary/10">
+<button class="text-slate-900 dark:text-slate-100 flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">Schedule Appointment</h2>
+<div class="flex size-10 items-center justify-end">
+<button class="text-slate-900 dark:text-slate-100 flex items-center justify-center">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto no-scrollbar pb-32">
+<!-- Barber Info Mini Card -->
+<div class="px-6 pt-6 pb-4">
+<div class="flex items-center gap-4 bg-primary/5 p-4 rounded-xl border border-primary/10">
+<img alt="Barber profile" class="size-16 rounded-lg object-cover" data-alt="Professional barber with styled hair and beard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaQcYOFK3iix_JYKTB71OFsZKb2tpn2HHvlhsKVNUTiDF9Pl-CYLjIBXxI-ZeGaR5o6Vk3ab876GDY6Zflf5BgmXL9-kZjFb8umwAd3YJUmr3hCcibP8L1kJ6gAPBGdDc6B4XzvF9qz3O6I4TGIkJYqwWDHqDmqzXtf5PqdhVXR54msWpentDwSFIi-BA5pIjdgCKhjNsl4N3VG0h2CtatdCslbc0afCuQ1OzX9I7nOWE-8PFBPTVqM4H1udUENFXIvfV_1KiUis4"/>
+<div>
+<h4 class="font-bold text-lg text-slate-900 dark:text-slate-100 leading-tight">Victor Magnus</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Master Barber • Platinum Studio</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary text-sm shrink-0" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="text-xs font-bold text-slate-600 dark:text-slate-300">4.9 (124 reviews)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Date Selection Header -->
+<div class="px-6 flex items-center justify-between mt-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold tracking-tight">Select Date</h3>
+<span class="text-primary text-sm font-semibold">October 2023</span>
+</div>
+<!-- Weekly Calendar View -->
+<div class="flex gap-3 px-6 py-4 overflow-x-auto no-scrollbar">
+<button class="flex min-w-[64px] flex-col items-center justify-center gap-2 rounded-2xl border border-slate-200 dark:border-slate-800 p-3 bg-white dark:bg-slate-900/50">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Mon</p>
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold">12</p>
+</button>
+<button class="flex min-w-[64px] flex-col items-center justify-center gap-2 rounded-2xl border border-slate-200 dark:border-slate-800 p-3 bg-white dark:bg-slate-900/50">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Tue</p>
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold">13</p>
+</button>
+<button class="flex min-w-[64px] flex-col items-center justify-center gap-2 rounded-2xl bg-primary p-3 shadow-lg shadow-primary/20">
+<p class="text-slate-900 text-xs font-bold uppercase tracking-wider">Wed</p>
+<p class="text-slate-900 text-lg font-bold">14</p>
+<div class="size-1 rounded-full bg-slate-900"></div>
+</button>
+<button class="flex min-w-[64px] flex-col items-center justify-center gap-2 rounded-2xl border border-slate-200 dark:border-slate-800 p-3 bg-white dark:bg-slate-900/50">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Thu</p>
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold">15</p>
+</button>
+<button class="flex min-w-[64px] flex-col items-center justify-center gap-2 rounded-2xl border border-slate-200 dark:border-slate-800 p-3 bg-white dark:bg-slate-900/50">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Fri</p>
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold">16</p>
+</button>
+<button class="flex min-w-[64px] flex-col items-center justify-center gap-2 rounded-2xl border border-slate-200 dark:border-slate-800 p-3 bg-white dark:bg-slate-900/50 opacity-50">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Sat</p>
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold">17</p>
+</button>
+</div>
+<!-- Time Slots Header -->
+<div class="px-6 mt-8 flex items-center justify-between">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold tracking-tight">Available Times</h3>
+<div class="flex items-center gap-2">
+<span class="size-2 rounded-full bg-primary"></span>
+<span class="text-slate-500 dark:text-slate-400 text-xs font-medium">Morning &amp; Afternoon</span>
+</div>
+</div>
+<!-- Time Slots Grid -->
+<div class="grid grid-cols-3 gap-3 p-6">
+<button class="flex h-12 items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 text-slate-700 dark:text-slate-300 font-bold text-sm transition-all hover:border-primary/50">09:00 AM</button>
+<button class="flex h-12 items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 text-slate-700 dark:text-slate-300 font-bold text-sm transition-all hover:border-primary/50">09:30 AM</button>
+<button class="flex h-12 items-center justify-center rounded-full border-none bg-primary text-slate-900 font-bold text-sm shadow-lg shadow-primary/20">10:00 AM</button>
+<button class="flex h-12 items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 text-slate-700 dark:text-slate-300 font-bold text-sm transition-all hover:border-primary/50">10:30 AM</button>
+<button class="flex h-12 items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 text-slate-700 dark:text-slate-300 font-bold text-sm transition-all hover:border-primary/50">11:00 AM</button>
+<button class="flex h-12 items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 text-slate-700 dark:text-slate-300 font-bold text-sm transition-all hover:border-primary/50">11:30 AM</button>
+<button class="flex h-12 items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 text-slate-700 dark:text-slate-300 font-bold text-sm transition-all hover:border-primary/50 opacity-40 cursor-not-allowed">01:00 PM</button>
+<button class="flex h-12 items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 text-slate-700 dark:text-slate-300 font-bold text-sm transition-all hover:border-primary/50">01:30 PM</button>
+<button class="flex h-12 items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 text-slate-700 dark:text-slate-300 font-bold text-sm transition-all hover:border-primary/50">02:00 PM</button>
+<button class="flex h-12 items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 text-slate-700 dark:text-slate-300 font-bold text-sm transition-all hover:border-primary/50">02:30 PM</button>
+<button class="flex h-12 items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 text-slate-700 dark:text-slate-300 font-bold text-sm transition-all hover:border-primary/50">03:00 PM</button>
+<button class="flex h-12 items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 text-slate-700 dark:text-slate-300 font-bold text-sm transition-all hover:border-primary/50">03:30 PM</button>
+</div>
+<!-- Service Summary -->
+<div class="px-6 py-4 border-t border-primary/10">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold tracking-tight mb-3">Service Details</h3>
+<div class="flex justify-between items-center bg-slate-100 dark:bg-slate-900 p-4 rounded-xl">
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-slate-100 font-bold">Classic Gentleman's Cut</span>
+<span class="text-slate-500 dark:text-slate-400 text-xs">45 mins • Includes wash &amp; style</span>
+</div>
+<span class="text-primary font-bold">$45.00</span>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom CTA -->
+<div class="absolute bottom-0 left-0 w-full bg-background-light dark:bg-background-dark p-6 border-t border-primary/20 backdrop-blur-xl bg-opacity-80 dark:bg-opacity-80">
+<button class="flex w-full items-center justify-center h-14 rounded-full bg-primary text-slate-900 font-bold text-lg shadow-xl shadow-primary/30 active:scale-95 transition-transform">
+                Confirm Booking
+            </button>
+</div>
+<!-- Bottom Navigation (Simplified version for context) -->
+<div class="fixed bottom-0 hidden">
+<!-- Provided BottomNavBar logic can be added here if this was a multi-screen app, keeping layout clean for appointment focused view -->
+</div>
+</div>
+</body></html>

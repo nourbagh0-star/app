@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Manage Services - Barber Admin</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-4 py-4 flex items-center justify-between">
+<button class="flex items-center justify-center p-2 hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight text-slate-900 dark:text-slate-100">Manage Services</h1>
+<button class="flex items-center justify-center p-2 hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-primary">more_vert</span>
+</button>
+</header>
+<!-- Content Area -->
+<main class="flex-1 overflow-y-auto px-4 py-6 space-y-4">
+<div class="flex flex-col gap-1 mb-6">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Service Menu</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">Update your offerings, prices, and durations.</p>
+</div>
+<!-- Service Item 1 -->
+<div class="bg-slate-100 dark:bg-primary/5 border border-primary/10 rounded-xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-primary/20 p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary">content_cut</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Classic Fade</h3>
+<div class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+<span>30 min</span>
+<span class="w-1 h-1 bg-primary/40 rounded-full"></span>
+<span class="text-primary font-semibold">$35</span>
+</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-primary/10 rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 hover:bg-red-500/10 rounded-lg text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Service Item 2 -->
+<div class="bg-slate-100 dark:bg-primary/5 border border-primary/10 rounded-xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-primary/20 p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary">face</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Beard Trim</h3>
+<div class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+<span>20 min</span>
+<span class="w-1 h-1 bg-primary/40 rounded-full"></span>
+<span class="text-primary font-semibold">$20</span>
+</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-primary/10 rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 hover:bg-red-500/10 rounded-lg text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Service Item 3 -->
+<div class="bg-slate-100 dark:bg-primary/5 border border-primary/10 rounded-xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-primary/20 p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary">water_drop</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Hair Wash &amp; Style</h3>
+<div class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+<span>15 min</span>
+<span class="w-1 h-1 bg-primary/40 rounded-full"></span>
+<span class="text-primary font-semibold">$15</span>
+</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-primary/10 rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 hover:bg-red-500/10 rounded-lg text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Service Item 4 -->
+<div class="bg-slate-100 dark:bg-primary/5 border border-primary/10 rounded-xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-primary/20 p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary">soap</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Hot Towel Shave</h3>
+<div class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+<span>45 min</span>
+<span class="w-1 h-1 bg-primary/40 rounded-full"></span>
+<span class="text-primary font-semibold">$45</span>
+</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-primary/10 rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 hover:bg-red-500/10 rounded-lg text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Action Area -->
+<div class="px-4 py-6 bg-background-light dark:bg-background-dark">
+<button class="w-full bg-primary hover:bg-primary/90 text-slate-900 font-bold py-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-transform active:scale-95">
+<span class="material-symbols-outlined">add</span>
+            Add New Service
+        </button>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="border-t border-primary/10 bg-slate-50 dark:bg-background-dark/80 backdrop-blur-md px-4 pb-6 pt-2">
+<div class="flex justify-around items-center max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary group" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Schedule</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary group" href="#">
+<span class="material-symbols-outlined fill-1">grid_view</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Services</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary group" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Clients</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary group" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Settings</span>
+</a>
+</div>
+</nav>
+</body></html>

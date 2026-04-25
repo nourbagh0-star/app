@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>The Barber Club</title>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body {
+            background-image: radial-gradient(circle at 0% 0%, rgba(212, 175, 53, 0.05) 0%, transparent 50%),
+                              radial-gradient(circle at 100% 100%, rgba(212, 175, 53, 0.05) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- Top Header Section -->
+<header class="p-6 pb-2">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-full border-2 border-primary overflow-hidden">
+<img alt="Alex Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a young man smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeH4ML2iOaOSXMsnlzeLvaJcpf2-TkGCVZMESPBEiDrkjeTTbcHIJpBIlJtBSe-DEt6oOdh1AFEdNakh3nXzMeYTdhKb8KHsTLWiBfiVjBuN4hNmB05Y7gFTITUG8fN7iXnb9-IOmlLW73JCDzHm5uyTSputMH94phjO_Z4JHqhuSdF-is4gzerDSOE2RIobmlGahBfj63nBF0foi2vnAcueOJZUr7rlc1r88Yee29Y2HqAzbiyhBfsin64E-Wbc8EAvYPUC_8H9w"/>
+</div>
+<div>
+<p class="text-slate-400 text-sm font-medium">Hello, Alex</p>
+<h1 class="text-xl font-bold tracking-tight">The Barber Club</h1>
+</div>
+</div>
+<button class="size-10 flex items-center justify-center rounded-full bg-slate-800/50 text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+<h2 class="text-3xl font-extrabold mb-6 leading-tight">Find your <span class="text-primary italic font-light">next style</span></h2>
+<!-- Search Bar -->
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="w-full h-14 pl-12 pr-4 bg-slate-800/40 border-none rounded-xl focus:ring-2 focus:ring-primary/50 text-slate-100 placeholder:text-slate-500 transition-all" placeholder="Search for barbers or services" type="text"/>
+</div>
+</header>
+<!-- Category Section -->
+<section class="mt-4">
+<div class="flex gap-4 overflow-x-auto px-6 no-scrollbar pb-2">
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="size-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">content_cut</span>
+</div>
+<p class="text-xs font-semibold uppercase tracking-wider">Haircut</p>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="size-16 rounded-2xl bg-slate-800/40 border border-slate-700/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">face</span>
+</div>
+<p class="text-xs font-semibold uppercase tracking-wider opacity-60">Beard</p>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="size-16 rounded-2xl bg-slate-800/40 border border-slate-700/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">spa</span>
+</div>
+<p class="text-xs font-semibold uppercase tracking-wider opacity-60">Facial</p>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="size-16 rounded-2xl bg-slate-800/40 border border-slate-700/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">self_care</span>
+</div>
+<p class="text-xs font-semibold uppercase tracking-wider opacity-60">Massage</p>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="size-16 rounded-2xl bg-slate-800/40 border border-slate-700/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">brush</span>
+</div>
+<p class="text-xs font-semibold uppercase tracking-wider opacity-60">Coloring</p>
+</div>
+</div>
+</section>
+<!-- Main Section: Shop Cards -->
+<main class="px-6 mt-8">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-bold tracking-wide">Nearby Top-Rated</h3>
+<button class="text-primary text-sm font-semibold">See All</button>
+</div>
+<div class="space-y-6">
+<!-- Shop Card 1 -->
+<div class="bg-slate-800/30 rounded-2xl overflow-hidden border border-slate-700/30">
+<div class="h-48 relative">
+<img alt="The Heritage Grooming Interior" class="w-full h-full object-cover" data-alt="Elegant vintage barbershop interior with leather chairs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEDz8qBEDn1L4391ydajx7gpgEWYG70_l9zO13Wiab_D8Av65WDZkrWNQ8PBzR3-KqHeA94z0ce3qfnv38PkKm_KBt7-T-ApwwRf4tFHbxEVHmtvPjUi7BZT3mr4bu6TQ3a2ytdKF6ULLZPucfR0tO1NOZkBO2eQ5JAO7l7QYs7i_Ij8om9SHYv_oSAi2sqrrR81jyhRSWMEDi6S8mfGppPCFCYBa19oNDmoXzJ-O7hhMKj1VUWVoLJzSjEFnQ7CJjSQwm7jOLhYc"/>
+<div class="absolute top-3 right-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-xs fill-current">star</span>
+<span class="text-xs font-bold text-white">4.9</span>
+</div>
+</div>
+<div class="p-4 flex justify-between items-start">
+<div>
+<h4 class="text-lg font-bold">The Heritage Grooming</h4>
+<div class="flex items-center gap-2 text-slate-400 text-sm mt-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>120 reviews • 1.2 km away</span>
+</div>
+</div>
+<button class="bg-primary text-background-dark font-bold px-4 py-2 rounded-lg text-sm">Book</button>
+</div>
+</div>
+<!-- Shop Card 2 -->
+<div class="bg-slate-800/30 rounded-2xl overflow-hidden border border-slate-700/30">
+<div class="h-48 relative">
+<img alt="Gilded Scissors Interior" class="w-full h-full object-cover" data-alt="Modern minimalist barbershop with neon lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyx-mtgAxZQy6g-ua5vS5HGLiYmalYxIeG7HVRg3uGLPSmWXanidbnAaefPtQ01UthjEPIg1ewbwxLc-3CExMvJW0appWyeuI0OntZqVSMrntJNbDEGdtwKkHNWDJaJAHIKehpe-zATQ2HFfhtABn6C_doSp40WNZz0VOaOzw0lJkhwpbRBgXr8tMPtE05YQ3zAUxb6XZzoJ0SqFDFQprbUNnU8oWHmxUr8x3t9FJ76gIDsDoronMiXx31_6-0VPdmJbgcqgqCsuI"/>
+<div class="absolute top-3 right-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-xs fill-current">star</span>
+<span class="text-xs font-bold text-white">4.8</span>
+</div>
+</div>
+<div class="p-4 flex justify-between items-start">
+<div>
+<h4 class="text-lg font-bold">Gilded Scissors</h4>
+<div class="flex items-center gap-2 text-slate-400 text-sm mt-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>95 reviews • 0.8 km away</span>
+</div>
+</div>
+<button class="bg-primary text-background-dark font-bold px-4 py-2 rounded-lg text-sm">Book</button>
+</div>
+</div>
+<!-- Shop Card 3 -->
+<div class="bg-slate-800/30 rounded-2xl overflow-hidden border border-slate-700/30">
+<div class="h-48 relative">
+<img alt="Urban Blade Interior" class="w-full h-full object-cover" data-alt="Hip urban barbershop with industrial decor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5I69AwCWyoVJGHjPaCbVE16Vnl0Naz4mwruNlZZ9epToGX204JJPhaK9FmhSVjgz1_aqV4bPeuvGUB0Rul8TLnUly5bd_z4fpUPM2P0lokxvhCRMSA6f5oHKSHl3YIK_3gB6Nob5DmXdxUjb2yf1EfwwJrwMICGUfBW4RDaxnBBGjQfcLHEQPc4Obu_qcH17BNZaiaP9CngnKzcUTL4Mt6Bfjy_yk4jaX-E1x8XyC7VtGlrWbax_wwzZgbE-Ao3BRgI8ouBPy_AQ"/>
+<div class="absolute top-3 right-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-xs fill-current">star</span>
+<span class="text-xs font-bold text-white">4.7</span>
+</div>
+</div>
+<div class="p-4 flex justify-between items-start">
+<div>
+<h4 class="text-lg font-bold">Urban Blade Studio</h4>
+<div class="flex items-center gap-2 text-slate-400 text-sm mt-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>210 reviews • 2.5 km away</span>
+</div>
+</div>
+<button class="bg-primary text-background-dark font-bold px-4 py-2 rounded-lg text-sm">Book</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-6 left-6 right-6 h-18 bg-slate-900/90 backdrop-blur-xl border border-white/10 rounded-2xl flex items-center justify-between px-6 py-3 shadow-2xl z-50">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">explore</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Explore</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">calendar_month</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Bookings</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Profile</span>
+</a>
+</nav>
+</body></html>

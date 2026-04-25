@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "824271605986",
+    "project_id": "multi-appbarber",
+    "storage_bucket": "multi-appbarber.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824271605986:android:8e6269aec86a32b29c0ebb",
+        "android_client_info": {
+          "package_name": "com.example.barber_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAWdX9KgfrKyR8DCTc0Dw_PMrI9y1bNiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824271605986:android:bd01bbf2aef057f89c0ebb",
+        "android_client_info": {
+          "package_name": "com.example.customer_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAWdX9KgfrKyR8DCTc0Dw_PMrI9y1bNiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

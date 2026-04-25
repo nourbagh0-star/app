@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile Settings - Premium Experience</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1a1a1a",
+                        "surface-dark": "#262626",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4af35 0%, #f4d03f 100%);
+        }
+        .premium-border {
+            border-color: rgba(212, 175, 53, 0.2);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto shadow-2xl bg-background-light dark:bg-background-dark">
+<!-- Header -->
+<div class="flex items-center px-6 pt-8 pb-4 justify-between">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 items-center justify-center rounded-full bg-slate-200/50 dark:bg-surface-dark">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">Settings</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center size-10 rounded-full bg-slate-200/50 dark:bg-surface-dark text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Profile Hero Section -->
+<div class="flex p-6 @container">
+<div class="flex w-full flex-col gap-6 items-center">
+<div class="flex flex-col items-center gap-4">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 border-4 border-primary/20 p-1" data-alt="Sophisticated professional male portrait for user profile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCNflH6qExOv-agw4QCKY3mwmupnhtzbjXz4jCLj2JnLcrX5CT_1NWjJe_KgiDdsr7DaUDZFkloQi_oxW1kpVsxXpU_ouIF9LDLrcpbp40s3O16-0zWtMN4TIqoPwEFWBELje5ImzVHHvNzGGTet6bysa-LGVRWZ7U_I_lYZ78MlqmRpcG0zUDEZNqrhUWeqpr50V-rwvzvs7wD676JdmQkCWvTB66V617kn-Y3W0KOvSkPZctj7p0oeM3jEQJmRIn5Va1d2pUoXcM");'>
+</div>
+<div class="absolute bottom-0 right-0 bg-primary rounded-full p-2 border-4 border-background-dark flex items-center justify-center">
+<span class="material-symbols-outlined text-background-dark text-sm font-bold">edit</span>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-extrabold tracking-tight">Alexander Sterling</p>
+<div class="mt-1 flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/30 rounded-full">
+<span class="material-symbols-outlined text-primary text-xs shrink-0">workspace_premium</span>
+<p class="text-primary text-xs font-bold uppercase tracking-widest">Gold Member</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Navigation -->
+<div class="flex flex-col px-6 gap-1">
+<h3 class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-[0.2em] mb-4">Account Overview</h3>
+<!-- Menu Items -->
+<div class="flex flex-col gap-2">
+<!-- Edit Profile -->
+<div class="flex items-center gap-4 bg-slate-100 dark:bg-surface-dark/40 hover:bg-slate-200 dark:hover:bg-surface-dark transition-colors px-4 py-4 rounded-xl cursor-pointer">
+<div class="flex items-center justify-center rounded-lg bg-primary/20 text-primary shrink-0 size-11">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold flex-1">Edit Profile</p>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+<!-- Payment Methods -->
+<div class="flex items-center gap-4 bg-slate-100 dark:bg-surface-dark/40 hover:bg-slate-200 dark:hover:bg-surface-dark transition-colors px-4 py-4 rounded-xl cursor-pointer">
+<div class="flex items-center justify-center rounded-lg bg-primary/20 text-primary shrink-0 size-11">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold flex-1">Payment Methods</p>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+<!-- Notifications -->
+<div class="flex items-center gap-4 bg-slate-100 dark:bg-surface-dark/40 hover:bg-slate-200 dark:hover:bg-surface-dark transition-colors px-4 py-4 rounded-xl cursor-pointer">
+<div class="flex items-center justify-center rounded-lg bg-primary/20 text-primary shrink-0 size-11">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<div class="flex flex-1 flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold">Notifications</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Manage updates &amp; alerts</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+</div>
+<h3 class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-[0.2em] mt-8 mb-4">Support</h3>
+<div class="flex flex-col gap-2 mb-8">
+<!-- Help & Support -->
+<div class="flex items-center gap-4 bg-slate-100 dark:bg-surface-dark/40 hover:bg-slate-200 dark:hover:bg-surface-dark transition-colors px-4 py-4 rounded-xl cursor-pointer">
+<div class="flex items-center justify-center rounded-lg bg-primary/20 text-primary shrink-0 size-11">
+<span class="material-symbols-outlined">help</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold flex-1">Help &amp; Support</p>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+<!-- About -->
+<div class="flex items-center gap-4 bg-slate-100 dark:bg-surface-dark/40 hover:bg-slate-200 dark:hover:bg-surface-dark transition-colors px-4 py-4 rounded-xl cursor-pointer">
+<div class="flex items-center justify-center rounded-lg bg-primary/20 text-primary shrink-0 size-11">
+<span class="material-symbols-outlined">info</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold flex-1">About</p>
+<span class="material-symbols-outlined text-slate-400 text-xs">download_2</span>
+</div>
+<!-- Log Out -->
+<div class="flex items-center gap-4 bg-red-500/5 hover:bg-red-500/10 transition-colors px-4 py-4 rounded-xl cursor-pointer mt-4">
+<div class="flex items-center justify-center rounded-lg bg-red-500/20 text-red-500 shrink-0 size-11">
+<span class="material-symbols-outlined">logout</span>
+</div>
+<p class="text-red-500 text-base font-bold flex-1">Log Out</p>
+</div>
+</div>
+</div>
+<div class="flex-grow"></div>
+<!-- Bottom Navigation Bar -->
+<div class="relative z-40 bg-background-dark/90 backdrop-blur-xl border-t border-primary/20 px-6 py-4">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 opacity-40 hover:opacity-100 transition-opacity group" href="#">
+<span class="material-symbols-outlined text-slate-100 text-2xl group-hover:text-primary">home</span>
+<span class="text-[10px] font-bold text-slate-100 uppercase tracking-wider group-hover:text-primary">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 opacity-40 hover:opacity-100 transition-opacity group" href="#">
+<span class="material-symbols-outlined text-slate-100 text-2xl group-hover:text-primary">explore</span>
+<span class="text-[10px] font-bold text-slate-100 uppercase tracking-wider group-hover:text-primary">Explore</span>
+</a>
+<a class="flex flex-col items-center gap-1 opacity-40 hover:opacity-100 transition-opacity group" href="#">
+<span class="material-symbols-outlined text-slate-100 text-2xl group-hover:text-primary">calendar_today</span>
+<span class="text-[10px] font-bold text-slate-100 uppercase tracking-wider group-hover:text-primary">Bookings</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1">person</span>
+<span class="text-[10px] font-bold text-primary uppercase tracking-wider">Profile</span>
+</a>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BarberSchedule Masterpiece</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 0px;
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 23px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: repeating-linear-gradient(to bottom, #d4af35 0, #d4af35 4px, transparent 4px, transparent 8px);
+            opacity: 0.2;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-6 pt-12 pb-4">
+<div class="flex items-center justify-between mb-6">
+<div class="flex flex-col">
+<h1 class="text-2xl font-extrabold tracking-tight text-primary">Masterpiece</h1>
+<p class="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 font-bold">Studio Manager</p>
+</div>
+<div class="size-10 rounded-full border border-primary/30 p-0.5">
+<img alt="Barber profile" class="w-full h-full object-cover rounded-full" data-alt="Professional barber portrait in studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_YOUmYbmhE7R3XxVMILo8yIrFY411F6OdbPsLWGv2X3MV_8qIkgJEd3v9xoWuBRcbNLde_fdJsFsfpChDAhSjX0XAfbYipU1vs_dgFarQApya_bzP673_mKnxRLsNXJ6GnNNjGOE2S-v4xBaj8N6YXB4vYxjaV0N-i_AXU7WGYOQcpU-kuSxaynpiugf6vvk30PVM12TWUf5m0bnBP9AyyOMFYTDkMsCzSD2QCysp6y0rkQegEPgnEvTokygLsM1UvhoYUptZifQ"/>
+</div>
+</div>
+<!-- Date Selector -->
+<div class="flex gap-4 overflow-x-auto custom-scrollbar pb-2">
+<div class="flex flex-col items-center min-w-[50px] py-3 rounded-2xl border border-primary/10 bg-primary/5">
+<span class="text-[10px] uppercase font-bold text-slate-500">Mon</span>
+<span class="text-lg font-extrabold">12</span>
+</div>
+<div class="flex flex-col items-center min-w-[50px] py-3 rounded-2xl bg-primary text-background-dark shadow-lg shadow-primary/20">
+<span class="text-[10px] uppercase font-bold opacity-80">Tue</span>
+<span class="text-lg font-extrabold">13</span>
+<div class="size-1 bg-background-dark rounded-full mt-1"></div>
+</div>
+<div class="flex flex-col items-center min-w-[50px] py-3 rounded-2xl border border-primary/10 bg-primary/5">
+<span class="text-[10px] uppercase font-bold text-slate-500">Wed</span>
+<span class="text-lg font-extrabold">14</span>
+</div>
+<div class="flex flex-col items-center min-w-[50px] py-3 rounded-2xl border border-primary/10 bg-primary/5">
+<span class="text-[10px] uppercase font-bold text-slate-500">Thu</span>
+<span class="text-lg font-extrabold">15</span>
+</div>
+<div class="flex flex-col items-center min-w-[50px] py-3 rounded-2xl border border-primary/10 bg-primary/5">
+<span class="text-[10px] uppercase font-bold text-slate-500">Fri</span>
+<span class="text-lg font-extrabold">16</span>
+</div>
+</div>
+</header>
+<!-- Main Schedule Content -->
+<main class="flex-1 px-6 py-4 relative timeline-line">
+<!-- 9:00 AM Slot -->
+<div class="relative flex gap-6 mb-8 group">
+<div class="w-12 pt-1 flex flex-col items-center">
+<span class="text-xs font-bold text-primary">09:00</span>
+<span class="text-[10px] text-slate-500 uppercase">AM</span>
+</div>
+<div class="flex-1 bg-slate-100 dark:bg-slate-800/40 border border-primary/20 rounded-2xl p-4 flex items-center gap-4 shadow-sm">
+<div class="size-12 rounded-full border-2 border-primary overflow-hidden shrink-0">
+<img alt="James Wilson" class="w-full h-full object-cover" data-alt="Portrait of James Wilson" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASzADVZg9azSHfIk-MDk5tDjfL8VssPl2yjStVjsehBcsGx5jGJPqdVTA7EVdDLZY_-nUeYHYvj2HPFOMKWu2tk7mABxoPxs1wIfb8hwOHznF6ccDvTF2InYrvS2XwsAH2w8h5SUSxSu-Dd1h-3QMt1dLuiPvB0gGLrtfs4L_lee7Sj2kggBetzat560QjgvvFIvUqj74Eh2OAzNMIqEl1VWd-CMm69wenHkInrorNpEjkI8fIAMtvOAB9WmSL7-wTHwGwPjd4vS0"/>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-slate-900 dark:text-slate-100">James Wilson</h3>
+<p class="text-xs text-slate-500">Full Beard Grooming</p>
+</div>
+<div class="px-3 py-1 bg-green-500/10 text-green-500 text-[10px] font-bold uppercase tracking-wider rounded-full border border-green-500/20">
+                    Confirmed
+                </div>
+</div>
+</div>
+<!-- 10:00 AM Slot (Availability) -->
+<div class="relative flex gap-6 mb-8">
+<div class="w-12 pt-1 flex flex-col items-center">
+<span class="text-xs font-bold text-slate-400">10:00</span>
+<span class="text-[10px] text-slate-500 uppercase">AM</span>
+</div>
+<div class="flex-1 border-2 border-dashed border-primary/10 rounded-2xl p-4 flex items-center justify-between bg-transparent hover:bg-primary/5 transition-colors cursor-pointer group">
+<span class="text-slate-500 text-sm font-medium italic">Available Slot</span>
+<span class="material-symbols-outlined text-primary/30 group-hover:text-primary transition-colors">add_circle</span>
+</div>
+</div>
+<!-- 11:00 AM Slot -->
+<div class="relative flex gap-6 mb-8">
+<div class="w-12 pt-1 flex flex-col items-center">
+<span class="text-xs font-bold text-primary">11:00</span>
+<span class="text-[10px] text-slate-500 uppercase">AM</span>
+</div>
+<div class="flex-1 bg-primary/10 border border-primary/40 rounded-2xl p-4 flex items-center gap-4 shadow-lg shadow-primary/5">
+<div class="size-12 rounded-full border-2 border-primary overflow-hidden shrink-0 relative">
+<img alt="Sarah Jenkins" class="w-full h-full object-cover" data-alt="Portrait of male customer Sarah Jenkins" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjhEewgzWZtvX4rdk60eeUJxA1Kc3rmTX_Dx1n9jAaq4Bmu4cl2x7MW6dbN3GfU5YYvn8UbLR4cci5Ve6n3ze-P0HGvL5OOBm2mYEMrhbXwV8qJZwhV5sj1Vqpek7HCeBCPgFoVKNR653fVQ-hQ8ASdTZ0OjgrKWs_gS1isYT9c8UpUYnSDkyb8d_k4fccgOkx2j7iqdRe0BxpkQomeIY7XbRq_sKqUZP5pXCyyEtJX_MZzU8AePRTc6E79yTAvFYc9ZH-uCl-Gvs"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xs animate-pulse">content_cut</span>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Sarah Jenkins</h3>
+<p class="text-xs text-slate-500">Classic Taper Cut</p>
+</div>
+<div class="px-3 py-1 bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-wider rounded-full border border-primary/30">
+                    In Progress
+                </div>
+</div>
+</div>
+<!-- 12:00 PM Slot (Break) -->
+<div class="relative flex gap-6 mb-8">
+<div class="w-12 pt-1 flex flex-col items-center opacity-40">
+<span class="text-xs font-bold">12:00</span>
+<span class="text-[10px] uppercase">PM</span>
+</div>
+<div class="flex-1 py-2 flex items-center gap-4">
+<div class="h-px flex-1 bg-primary/10"></div>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Lunch Break</span>
+<div class="h-px flex-1 bg-primary/10"></div>
+</div>
+</div>
+<!-- 01:00 PM Slot -->
+<div class="relative flex gap-6 mb-8">
+<div class="w-12 pt-1 flex flex-col items-center">
+<span class="text-xs font-bold text-primary">01:00</span>
+<span class="text-[10px] text-slate-500 uppercase">PM</span>
+</div>
+<div class="flex-1 bg-slate-100 dark:bg-slate-800/40 border border-primary/20 rounded-2xl p-4 flex items-center gap-4 shadow-sm">
+<div class="size-12 rounded-full border-2 border-primary overflow-hidden shrink-0">
+<img alt="Michael Chen" class="w-full h-full object-cover" data-alt="Portrait of Michael Chen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9fbySeO-dIK1e_4ZjL5uObm8iXWXdexVa9C91KRUY5r9dPiiRYrMqtz2ryCJ5zp0RXi8jLoL1rDOf81dz1LldVzfBQpCCEGMN4pqnHCke1zSBl0Pn3Z0AP83Py3zfN6DrM0KTE8wuo0YbNfITSuXSxZlHGPOvy9rNfQgxAKJj4_Y_Y56tD3giUAIoha5-ixxwZ-UGAcn07Abxs10b0m8vGXkaQXXQYnntZCylOSVPnJ96enSqNhG_s5IQfNra0QsveHijJsEm1rE"/>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Michael Chen</h3>
+<p class="text-xs text-slate-500">Signature Fade + Wash</p>
+</div>
+<div class="px-3 py-1 bg-slate-500/10 text-slate-400 text-[10px] font-bold uppercase tracking-wider rounded-full border border-slate-500/20">
+                    Upcoming
+                </div>
+</div>
+</div>
+<!-- Availability Slot -->
+<div class="relative flex gap-6 mb-8">
+<div class="w-12 pt-1 flex flex-col items-center">
+<span class="text-xs font-bold text-slate-400">02:00</span>
+<span class="text-[10px] text-slate-500 uppercase">PM</span>
+</div>
+<div class="flex-1 border-2 border-dashed border-primary/10 rounded-2xl p-4 flex items-center justify-between bg-transparent hover:bg-primary/5 transition-colors cursor-pointer group">
+<span class="text-slate-500 text-sm font-medium italic">Available Slot</span>
+<span class="material-symbols-outlined text-primary/30 group-hover:text-primary transition-colors">add_circle</span>
+</div>
+</div>
+</main>
+<!-- FAB -->
+<button class="fixed bottom-24 right-6 size-14 bg-primary text-background-dark rounded-full shadow-2xl shadow-primary/40 flex items-center justify-center hover:scale-105 active:scale-95 transition-transform z-30">
+<span class="material-symbols-outlined text-3xl font-bold">add</span>
+</button>
+<!-- Navigation Bar -->
+<nav class="sticky bottom-0 bg-background-light dark:bg-background-dark border-t border-primary/10 px-8 py-4 pb-8 flex justify-between items-center z-20">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">calendar_today</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Schedule</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Clients</span>
+</a>
+<div class="relative -top-2">
+<div class="absolute -inset-2 bg-primary/20 rounded-full blur-lg"></div>
+<a class="relative flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">content_cut</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Services</span>
+</a>
+</div>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Reports</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Settings</span>
+</a>
+</nav>
+</body></html>

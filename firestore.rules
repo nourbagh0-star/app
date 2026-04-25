@@ -1,0 +1,104 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // --- Helper Functions ---
+    
+    // Check if the user is signed in
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Check if the user is a customer
+    function isCustomer() {
+      return isAuthenticated() && 
+             get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'customer';
+    }
+    
+    // Check if the user is a barber
+    function isBarber() {
+      return isAuthenticated() && 
+             get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'barber';
+    }
+    
+    // Validate required booking fields
+    function isValidBooking() {
+      let data = request.resource.data;
+      return data.keys().hasAll(['customerId', 'shopId', 'barberId', 'serviceIds', 'dateTime', 'status'])
+          && data.status in ['pending', 'confirmed', 'canceled', 'completed'];
+    }
+
+    // --- Rules ---
+
+    // USERS COLLECTION
+    match /users/{userId} {
+      // Anyone can create their own profile during registration
+      allow create: if isAuthenticated() && request.auth.uid == userId;
+      // Users can only read and update their own profiles
+      allow read, update: if isAuthenticated() && request.auth.uid == userId;
+      allow delete: if false; // Soft-delete or block instead of allowing hard delete
+    }
+
+    // SHOPS COLLECTION
+    match /shops/{shopId} {
+      // Anyone authenticated can view shops (home page, search)
+      allow read: if isAuthenticated();
+      
+      // Only barbers (or admins) can create a shop
+      allow create: if isBarber();
+      
+      // Only the shop owner can update their shop
+      allow update: if isBarber() && resource.data.ownerId == request.auth.uid;
+      
+      allow delete: if false; // Disable delete for data consistency
+
+      // SHOP SUBCOLLECTIONS
+      
+      // Services Subcollection
+      match /services/{serviceId} {
+        // Anyone authenticated can view services
+        allow read: if isAuthenticated();
+        // Only the shop owner can manage services
+        allow write: if isBarber() && get(/databases/$(database)/documents/shops/$(shopId)).data.ownerId == request.auth.uid;
+      }
+      
+      // Barbers (Staff) Subcollection
+      match /barbers/{barberId} {
+        // Anyone authenticated can view staff
+        allow read: if isAuthenticated();
+        // Only the shop owner can manage staff profiles
+        allow write: if isBarber() && get(/databases/$(database)/documents/shops/$(shopId)).data.ownerId == request.auth.uid;
+      }
+
+      // Reviews Subcollection
+      match /reviews/{reviewId} {
+        allow read: if isAuthenticated();
+        // Only customers can write a review, and only for themselves
+        allow create: if isCustomer() && request.resource.data.userId == request.auth.uid;
+        allow update, delete: if false;
+      }
+    }
+
+    // BOOKINGS COLLECTION
+    match /bookings/{bookingId} {
+      // Customers can read their own bookings. Barbers can read bookings for their shop only.
+      allow read: if isAuthenticated()
+                  && (resource.data.customerId == request.auth.uid
+                      || (isBarber() && resource.data.shopId == get(/databases/$(database)/documents/users/$(request.auth.uid)).data.shopId));
+
+      // Customers can create bookings if they provide valid data and it's for themselves
+      allow create: if isCustomer()
+                     && request.resource.data.customerId == request.auth.uid
+                     && isValidBooking();
+
+      // Customers can update (e.g., cancel/reschedule) their own bookings
+      // Barbers can only update bookings belonging to their own shop
+      allow update: if isAuthenticated()
+                    && (resource.data.customerId == request.auth.uid
+                        || (isBarber() && resource.data.shopId == get(/databases/$(database)/documents/users/$(request.auth.uid)).data.shopId));
+                    
+      allow delete: if false; // Never delete bookings (keep for history). Use status='canceled' instead.
+    }
+  }
+}

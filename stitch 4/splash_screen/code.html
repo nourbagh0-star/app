@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE BARBER CLUB - Premium Grooming</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #d4af35 0%, #f9e297 50%, #b38728 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-glow {
+            box-shadow: 0 0 20px rgba(212, 175, 53, 0.15);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex flex-col items-center justify-between min-h-screen w-full px-6 py-12 overflow-hidden">
+<!-- Top Accessory -->
+<div class="w-full flex justify-end">
+<button class="flex items-center justify-center rounded-full p-2 text-primary/40 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">more_horiz</span>
+</button>
+</div>
+<!-- Main Content (Center) -->
+<div class="flex flex-col items-center justify-center flex-1 w-full max-w-sm">
+<!-- Logo Container -->
+<div class="relative group">
+<div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-150"></div>
+<div class="relative w-32 h-32 md:w-40 md:h-40 flex items-center justify-center border-2 border-primary/30 rounded-full gold-border-glow">
+<!-- Stylized Minimalist Barber Pole Logo -->
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-7xl md:text-8xl text-primary" style="font-variation-settings: 'FILL' 1, 'wght' 200;">
+                            content_cut
+                        </span>
+<div class="h-8 w-1 bg-gradient-to-b from-primary via-primary/50 to-transparent mt-[-10px]"></div>
+</div>
+</div>
+</div>
+<!-- Text Branding -->
+<div class="mt-12 text-center">
+<h1 class="text-slate-900 dark:text-slate-100 text-3xl md:text-4xl font-extralight tracking-[0.3em] uppercase mb-3">
+                    The Barber <span class="font-bold gold-gradient-text">Club</span>
+</h1>
+<div class="flex items-center justify-center gap-4 w-full opacity-60">
+<div class="h-[1px] flex-1 bg-gradient-to-r from-transparent to-primary/40"></div>
+<p class="text-primary text-[10px] md:text-xs font-medium tracking-[0.5em] uppercase whitespace-nowrap">
+                        Est. MMXIV
+                    </p>
+<div class="h-[1px] flex-1 bg-gradient-to-l from-transparent to-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Footer / Loader Section -->
+<div class="w-full max-w-xs flex flex-col gap-8">
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-end">
+<p class="text-slate-900/60 dark:text-slate-100/40 text-[10px] uppercase tracking-[0.2em] font-semibold">
+                        Preparing your session
+                    </p>
+<p class="text-primary text-xs font-bold tracking-widest">
+                        75%
+                    </p>
+</div>
+<div class="h-[2px] w-full bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 75%;"></div>
+</div>
+</div>
+<p class="text-slate-900/40 dark:text-slate-100/20 text-[9px] text-center uppercase tracking-[0.3em]">
+                Premium Grooming Experience
+            </p>
+</div>
+<!-- Background Decorative Element (Abstract Subtle Pattern) -->
+<div class="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/5 blur-[120px] rounded-full"></div>
+<div class="absolute top-[-5%] right-[-5%] w-[40%] h-[40%] bg-primary/5 blur-[100px] rounded-full"></div>
+<!-- Image Reference for Atmosphere -->
+<div class="hidden">
+<img alt="Luxury barber shop interior" data-alt="Close up of high-end barber chair and vintage mirror" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_bKBKByP5YPtE1IzITh-m7yZUQ6s1W_PkuAkpPMfZK7JBMqGHT1gzPUWyVUn6ZDxaeXpYsNTDidgIoYpDkgrHCmcc0Tg7OUWyUNZ18GJhFg6S0YSwX-UmqXc-w3d_olcTT19__jh_k6UAovw9tp4A7Gclk0-NoO22txuH2vNVx2Ejuf_LK-5HmEZG-PI9Y5UOhdCUQMncfc-_3We21hQQWRKYICWMJ_NmhIs1KmeATmMzTIy1BbF5mx0K2IGzODCQhKCiYeFjDq4"/>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1a1a1a",
+                        "neutral-dark": "#2a2720",
+                        "border-gold": "#514c3e"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto border-x border-primary/10">
+<div class="flex items-center p-6 pb-2 justify-between">
+<button class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="px-2 py-1 rounded bg-primary/10">
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Member Access</span>
+</div>
+</div>
+<div class="flex flex-col px-6 pt-10 pb-6">
+<div class="mb-8">
+<div class="w-16 h-1 w-primary bg-primary mb-6 rounded-full"></div>
+<h1 class="text-slate-900 dark:text-white tracking-tight text-[36px] font-extrabold leading-tight">
+                    The Grooming <br/><span class="text-primary italic">Excellence.</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-relaxed pt-4">
+                    Sign in to your account to book your next masterpiece session.
+                </p>
+</div>
+<div class="space-y-6">
+<div class="flex flex-col">
+<label class="flex flex-col w-full">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-semibold uppercase tracking-wider pb-3">Phone Number</p>
+<div class="relative flex items-center">
+<span class="absolute left-4 text-primary font-bold">+1</span>
+<input class="form-input flex w-full rounded-xl text-slate-900 dark:text-white focus:outline-0 focus:ring-1 focus:ring-primary border border-slate-200 dark:border-border-gold bg-white dark:bg-neutral-dark h-16 placeholder:text-slate-400 dark:placeholder:text-slate-500 pl-12 pr-4 text-lg font-medium tracking-widest" placeholder="(555) 000-0000" type="tel"/>
+</div>
+</label>
+</div>
+<div class="flex pt-2">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-6 bg-primary text-background-dark text-base font-extrabold leading-normal tracking-wide shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+<span>Send OTP Code</span>
+</button>
+</div>
+<div class="relative flex items-center py-4">
+<div class="flex-grow border-t border-slate-200 dark:border-border-gold"></div>
+<span class="flex-shrink mx-4 text-slate-400 text-xs font-bold uppercase tracking-widest">or continue with</span>
+<div class="flex-grow border-t border-slate-200 dark:border-border-gold"></div>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-xl h-14 px-6 border border-slate-200 dark:border-border-gold bg-transparent text-slate-800 dark:text-white text-base font-bold transition-all hover:bg-slate-50 dark:hover:bg-white/5">
+<img class="size-5" data-alt="Google colorful brand logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzrs20peZCbx8tEK9fOg8prk-w65Idjv3xQrAu4lH_SJv4S1EovE409YqAsS_-VZEB0c1cmWtZKaLeDolSCyCuhQa9pDn4prbSHFIJebK6XXJBNSdccTx5wdhpX0dDIgbNsh9cSq4HUjbQWpr_YTmqvVZ62MymGeDdVtALZe3BD33KFNLZy0GN0a4R2MMNZA4DuwrHaBk_Sj0EFGmap8GNljAQayL5kSfqs4KFQnIZgZVt40hF2YtEZBU6UZ89OFPEiWzAOnwxVak"/>
+<span>Google</span>
+</button>
+</div>
+</div>
+<div class="mt-auto pb-10 px-6 text-center">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">
+                New to the Barber's Club? 
+                <a class="text-primary font-bold hover:underline ml-1" href="#">Create Account</a>
+</p>
+</div>
+<div class="absolute top-0 right-0 -z-10 w-64 h-64 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 -z-10 w-72 h-72 bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+</div>
+</body></html>

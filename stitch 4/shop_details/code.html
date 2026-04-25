@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .custom-gradient {
+            background: linear-gradient(180deg, rgba(26,26,26,0) 0%, rgba(26,26,26,1) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<!-- Hero Section -->
+<div class="relative h-80 w-full overflow-hidden">
+<div class="absolute inset-0 bg-center bg-no-repeat bg-cover" data-alt="Luxurious modern barbershop interior with leather chairs" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4AIh38_t3j-42wwlapFT6KDZB0sHmWYhNr77qQzZ9JiTwmdqcuqBhFipRPswgIJKUSpNxpFNA-hwUvVSWe0bnTm--wXvGLGq8sAtG6g14eNjHQJO2WL-b8_ZnaWTixA2SHI7CuwOBNDymbUTmTX8V_LqGa8ejjLPuky-Y-jXiX4CU2BT4DKj8lvmGr7WRNYZ8WV3CslFSDOjuOqgUceHuPKpjkt7qxqF-T5fOOozbqFRc9DV-0kq2Rg7mmM0YJr1GrYMSQxXwIHs");'>
+</div>
+<div class="absolute inset-0 custom-gradient"></div>
+<!-- Floating Header Buttons -->
+<div class="absolute top-0 left-0 right-0 p-4 flex justify-between items-center z-10">
+<button class="flex items-center justify-center size-10 rounded-full bg-background-dark/40 backdrop-blur-md text-white border border-white/10">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full bg-background-dark/40 backdrop-blur-md text-white border border-white/10">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</div>
+<!-- Shop Info Section -->
+<div class="px-4 -mt-12 relative z-20">
+<h1 class="text-primary text-4xl font-extrabold tracking-tight leading-tight mb-2">The Royal Cut</h1>
+<div class="flex items-center gap-2 mb-4">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<p class="text-slate-400 text-sm font-medium">5.0 (128 reviews)</p>
+<span class="mx-2 text-slate-700">•</span>
+<p class="text-emerald-500 text-sm font-semibold">Open Now</p>
+</div>
+<div class="flex items-start gap-3 p-4 rounded-xl bg-primary/5 border border-primary/20 mb-8">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<p class="text-slate-100 text-base font-semibold">123 Luxury Lane, Gold Coast</p>
+<p class="text-slate-400 text-xs">0.5 miles away • Valet Parking Available</p>
+</div>
+</div>
+</div>
+<!-- Services Section -->
+<div class="px-4">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold text-slate-100">Our Services</h2>
+<button class="text-primary text-sm font-semibold">View All</button>
+</div>
+<div class="space-y-4">
+<!-- Service Item -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-slate-800/30 border border-slate-800 hover:border-primary/40 transition-colors">
+<div class="flex-1">
+<h3 class="text-slate-100 font-bold text-lg">Classic Haircut</h3>
+<div class="flex items-center gap-2 text-slate-400 text-sm mt-1">
+<span class="material-symbols-outlined text-xs">schedule</span>
+<span>45 mins</span>
+</div>
+</div>
+<div class="text-right">
+<p class="text-primary font-extrabold text-xl">$45</p>
+<button class="mt-2 px-4 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">Add</button>
+</div>
+</div>
+<!-- Service Item -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-slate-800/30 border border-slate-800 hover:border-primary/40 transition-colors">
+<div class="flex-1">
+<h3 class="text-slate-100 font-bold text-lg">Beard Sculpting</h3>
+<div class="flex items-center gap-2 text-slate-400 text-sm mt-1">
+<span class="material-symbols-outlined text-xs">schedule</span>
+<span>30 mins</span>
+</div>
+</div>
+<div class="text-right">
+<p class="text-primary font-extrabold text-xl">$35</p>
+<button class="mt-2 px-4 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">Add</button>
+</div>
+</div>
+<!-- Service Item -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-slate-800/30 border border-slate-800 hover:border-primary/40 transition-colors">
+<div class="flex-1">
+<h3 class="text-slate-100 font-bold text-lg">Royal Shave</h3>
+<div class="flex items-center gap-2 text-slate-400 text-sm mt-1">
+<span class="material-symbols-outlined text-xs">schedule</span>
+<span>60 mins</span>
+</div>
+</div>
+<div class="text-right">
+<p class="text-primary font-extrabold text-xl">$60</p>
+<button class="mt-2 px-4 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">Add</button>
+</div>
+</div>
+<!-- Service Item -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-slate-800/30 border border-slate-800 hover:border-primary/40 transition-colors">
+<div class="flex-1">
+<h3 class="text-slate-100 font-bold text-lg">The Full Grooming</h3>
+<div class="flex items-center gap-2 text-slate-400 text-sm mt-1">
+<span class="material-symbols-outlined text-xs">schedule</span>
+<span>90 mins</span>
+</div>
+</div>
+<div class="text-right">
+<p class="text-primary font-extrabold text-xl">$95</p>
+<button class="mt-2 px-4 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Footer CTA -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-background-dark/80 backdrop-blur-xl border-t border-slate-800 z-50">
+<button class="w-full bg-primary hover:bg-primary/90 text-background-dark font-display font-extrabold text-lg py-4 rounded-xl transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">calendar_month</span>
+                Book Appointment
+            </button>
+</div>
+<!-- Additional Info -->
+<div class="px-4 py-8 mb-20">
+<h2 class="text-xl font-bold text-slate-100 mb-4">Gallery</h2>
+<div class="grid grid-cols-3 gap-2">
+<div class="aspect-square rounded-lg bg-center bg-cover border border-slate-800" data-alt="Close up of barber tools" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7aMrfcEPv5j_4qAqrtV_3HY3Zc3rlBWwj34SBMIf88JKunU23rn2Ou95yUa4emePzaFxVRUD6Qgvnz3gvficbXPDaVZsgW1zqLdEkZlRoTgACq4bl9b0Vq6u4yhTUs1k0tJk7twl9ELles6qI0Npl9wHoNRCEiDq9Gnh-rjSVXmvDbvsz2stUzv6BLcHC3eYdfxTxZc-zbxsA4gUwGXORDYutm8lb-1KPB8y93RJFZepyDYdN73KLlMgw6WscbWyScvtsqI44Js8')"></div>
+<div class="aspect-square rounded-lg bg-center bg-cover border border-slate-800" data-alt="Barber cutting hair" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCYYn9KZm2owjBROcDffseY6TN_Wxs8NOQvYw8bJoR-5NFvf07G8g6ASJzEIu1KHherjQJkfrWC3jVHCXSw0XAa7w2aYkBXFUUPuuG-tsA4M4bP8T2vicYFcIvO6JUQFX1jpyf_wfRIyfV3mPofd350DjKUtSXGOTj9wLxyq1Ae0yR91V2KULyaT2yTFOMTU9W1o7HvWkVWk5xZ3sHpa0mCvhpSpVggv-bCz5yaPglpOItuS46EEoqtXr6HQhneWrSzpD7ThnQ_7C4')"></div>
+<div class="aspect-square rounded-lg bg-center bg-cover border border-slate-800" data-alt="Hair styling products" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASM9Y3W7g8tr231zE6k2w09Mo-Fl2feM1CVqJNz9lIOjzDye5_uyuoKnSs9Thl_0Lh0qjhq6XvFivAxMmf3bynlGLdS4y6ztVGsivg5_W_UJuT0I9Pd3nixvl9SEpYKAnrdoiPKLm4C0z_mX_o1feX_Cqn0CmsmvGKdF3WuFBoqWVNTuUDYqgigL3n7jgAW1lmSJhcN_NGaypH6HnmttGCi6Wa2_Vp60sBXzkLGdju5DTfDNpsF1M5RR_iFWUoyh9LyvuNNNkcMk0')"></div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Premium Barber - My Bookings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display pb-32">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-2xl overflow-x-hidden">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center p-4 justify-between">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100 uppercase italic">My Bookings</h1>
+<div class="size-10"></div>
+</div>
+<nav class="flex px-4">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-2 flex-1" href="#">
+<span class="text-sm font-bold uppercase tracking-wider">Upcoming</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-2 flex-1 hover:text-primary transition-colors" href="#">
+<span class="text-sm font-bold uppercase tracking-wider">Past</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-2 flex-1 hover:text-primary transition-colors" href="#">
+<span class="text-sm font-bold uppercase tracking-wider">Canceled</span>
+</a>
+</nav>
+</header>
+<main class="flex-1 p-4 space-y-6">
+<div class="space-y-4">
+<div class="bg-white dark:bg-primary/5 rounded-xl border border-primary/10 overflow-hidden shadow-lg transition-all hover:border-primary/30">
+<div class="flex p-4 gap-4">
+<div class="h-24 w-24 shrink-0 rounded-lg overflow-hidden border border-primary/20 bg-cover bg-center" data-alt="Interior of a luxury modern barbershop" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzHD2fPL2HYq5fzhGPQaATyDnnybtI8UHyyeU5uUuYjn7VgitspJ_9b82MxmJWe6UwohzqHvY6M3-cR9Gn2Ifxn5xJ_t0R3pllSnNv-NVMdCZyCpV7bw0O7A2g7ppp5w61JmvI6NwFTf3RCEfrnhK0j9QNAbzaNheiDujgm4yT8zbJnillQHYhCz0Dpi_VY80UTCmG4cs-FLhKzXdllLTaIRqGU8ktI-dGOs7YVEslSpA4ksn0FMTFOrKF0MQQOp9rU4wV04Mr16k');"></div>
+<div class="flex flex-col justify-between flex-1 py-0.5">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">The Golden Razor</h3>
+<span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-widest border border-primary/30">Confirmed</span>
+</div>
+<p class="text-sm font-medium text-primary mt-0.5">Master Haircut &amp; Beard</p>
+<div class="flex items-center gap-1.5 mt-2 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+<p class="text-xs font-semibold">Oct 24, 2:30 PM</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-2 p-4 pt-0">
+<button class="flex-1 flex items-center justify-center gap-2 h-10 rounded-lg border border-primary/30 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-sm leading-none">edit</span>
+                            Edit
+                        </button>
+<button class="flex-1 flex items-center justify-center gap-2 h-10 rounded-lg border border-red-500/20 bg-red-500/5 text-red-500 text-xs font-bold uppercase tracking-wider hover:bg-red-500/10 transition-all">
+<span class="material-symbols-outlined text-sm leading-none">close</span>
+                            Cancel
+                        </button>
+</div>
+</div>
+<div class="bg-white dark:bg-primary/5 rounded-xl border border-primary/10 overflow-hidden shadow-lg transition-all hover:border-primary/30">
+<div class="flex p-4 gap-4">
+<div class="h-24 w-24 shrink-0 rounded-lg overflow-hidden border border-primary/20 bg-cover bg-center" data-alt="Barber chair in a premium shop" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqOd1V8lP8FvmTkM3rfahpYdH5X593lNk_o-28ussQSQQU0nZi-nBVkg11wjpJn3VHpSzguinTjWTfxPy7ul1m1Wloliz0NprqQz4-GTBc7MHjrsmnPp8OX8x8U-VP2KqlDV2ri6jRHe79Z2RMMwX5xU4eEagHAn7r9Z4wAPjIysgqJ07zGLAOcm936v3Q43cRb6pKFlGPkHi-1B6oCKnPE4iksRlIL1qID6PpJl_lAbKnbCjTY9tDZ2_PQl9Lc2Gc8VKLZiTMz5g');"></div>
+<div class="flex flex-col justify-between flex-1 py-0.5">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">Royal Grooming Co.</h3>
+<span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest border border-blue-500/30">Pending</span>
+</div>
+<p class="text-sm font-medium text-primary mt-0.5">Signature Hot Shave</p>
+<div class="flex items-center gap-1.5 mt-2 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+<p class="text-xs font-semibold">Nov 02, 10:00 AM</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-2 p-4 pt-0">
+<button class="flex-1 flex items-center justify-center gap-2 h-10 rounded-lg border border-primary/30 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-sm leading-none">edit</span>
+                            Edit
+                        </button>
+<button class="flex-1 flex items-center justify-center gap-2 h-10 rounded-lg border border-red-500/20 bg-red-500/5 text-red-500 text-xs font-bold uppercase tracking-wider hover:bg-red-500/10 transition-all">
+<span class="material-symbols-outlined text-sm leading-none">close</span>
+                            Cancel
+                        </button>
+</div>
+</div>
+<div class="bg-white dark:bg-primary/5 rounded-xl border border-primary/10 overflow-hidden shadow-lg transition-all hover:border-primary/30">
+<div class="flex p-4 gap-4">
+<div class="h-24 w-24 shrink-0 rounded-lg overflow-hidden border border-primary/20 bg-cover bg-center" data-alt="Luxury barber kit and tools" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA_vjNzvL5ZmrEXGW0BddoI7f2DqQ-Um61FS79w4a7bVZxDRPocg14COXOafhtVH1l5OnAJ8a6r2-tarD9vt_dESNh5w2eaL3VbzUfptf9otMT0r4xFYFi0Nw2rDNXhTbu5IxyGKv0VL2j0zEis7w5a7HkqW9x-93Ty6D5q4nMadLxOrQ7CsJkVtW14uV1nBvflUdWyxNJFv7_TD9GprOcFiDLnwm8myYGyNypeK04YGGSsEIclyPUu3hCuk0_Jsi-Rppp-5WpXJzI');"></div>
+<div class="flex flex-col justify-between flex-1 py-0.5">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">Vintage Blades</h3>
+<span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-widest border border-primary/30">Confirmed</span>
+</div>
+<p class="text-sm font-medium text-primary mt-0.5">Executive Hair Styling</p>
+<div class="flex items-center gap-1.5 mt-2 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+<p class="text-xs font-semibold">Dec 15, 4:45 PM</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-2 p-4 pt-0">
+<button class="flex-1 flex items-center justify-center gap-2 h-10 rounded-lg border border-primary/30 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-sm leading-none">edit</span>
+                            Edit
+                        </button>
+<button class="flex-1 flex items-center justify-center gap-2 h-10 rounded-lg border border-red-500/20 bg-red-500/5 text-red-500 text-xs font-bold uppercase tracking-wider hover:bg-red-500/10 transition-all">
+<span class="material-symbols-outlined text-sm leading-none">close</span>
+                            Cancel
+                        </button>
+</div>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-6 left-6 right-6 h-16 bg-slate-900/90 backdrop-blur-xl border border-white/10 rounded-full flex items-center justify-around px-2 shadow-2xl z-50">
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-2xl">explore</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Explore</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<div class="relative flex flex-col items-center">
+<span class="material-symbols-outlined text-2xl fill-current">calendar_today</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Bookings</span>
+<div class="absolute -bottom-1 w-1 h-1 bg-primary rounded-full"></div>
+</div>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Profile</span>
+</a>
+</nav>
+</div>
+</body></html>

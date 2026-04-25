@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Complete Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full max-w-[480px] mx-auto flex-col bg-background-light dark:bg-background-dark overflow-x-hidden border-x border-slate-200 dark:border-primary/10">
+<!-- Top Navigation -->
+<div class="flex items-center p-4 pb-2 justify-between">
+<button class="text-slate-900 dark:text-primary flex size-12 shrink-0 items-center justify-start focus:outline-none">
+<span class="material-symbols-outlined text-3xl">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Complete Profile</h2>
+</div>
+<div class="flex flex-col flex-1 px-6">
+<!-- Profile Picture Section -->
+<div class="flex @container py-8">
+<div class="flex w-full flex-col gap-6 items-center">
+<div class="relative group">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32 border-2 border-primary/30 ring-4 ring-primary/10 flex items-center justify-center bg-primary/5" data-alt="Circular profile photo placeholder with gold silhouette" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBi1c8mDzhEP7iGPt3yGkRM6kTXwhUe5bPkRy0T8KEi-2db9l6kpNtRfRinqu-cskmozz_D-5vaMWUUwvk7OkSJmrmboS2fOy01as0cejY7SY5MYpAO_-Yw8ctfRRgZ0m82umBtia6RbNXJfwBe6vJBzni4QhQLTqoP8p5PlR2pSJP2tUPP7H0msEonFlfhwQYhKh9bm1bPUkxxnJBiZbW2aXsr9eXsWKcgGKMgpsmM8mdB5GCmGZ2YMVuryCbJ74FwTJJcSlTii9w");'>
+</div>
+<button class="absolute bottom-0 right-0 bg-primary text-background-dark p-2 rounded-full shadow-lg border-2 border-background-dark flex items-center justify-center">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1">photo_camera</span>
+</button>
+</div>
+<div class="flex flex-col items-center justify-center gap-1">
+<p class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight text-center">Upload Photo</p>
+<p class="text-slate-500 dark:text-primary/60 text-sm font-normal leading-normal text-center">Add a photo to personalize your profile</p>
+</div>
+</div>
+</div>
+<!-- Form Section -->
+<div class="flex flex-col gap-6 pt-4">
+<div class="flex flex-col gap-2">
+<label class="flex flex-col gap-2">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-semibold uppercase tracking-wider pl-1">Full Name</p>
+<div class="relative group">
+<div class="absolute left-4 top-1/2 -translate-y-1/2 text-primary/60">
+<span class="material-symbols-outlined text-xl">person</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-slate-900 dark:text-slate-100 focus:outline-0 focus:ring-1 focus:ring-primary border border-slate-200 dark:border-primary/20 bg-white dark:bg-primary/5 focus:border-primary h-14 placeholder:text-slate-400 dark:placeholder:text-primary/30 pl-12 pr-4 text-base font-normal leading-normal transition-all" placeholder="Enter your full name" type="text" value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-col gap-2">
+<label class="flex flex-col gap-2">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-semibold uppercase tracking-wider pl-1">City</p>
+<div class="relative group">
+<div class="absolute left-4 top-1/2 -translate-y-1/2 text-primary/60">
+<span class="material-symbols-outlined text-xl">location_on</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-slate-900 dark:text-slate-100 focus:outline-0 focus:ring-1 focus:ring-primary border border-slate-200 dark:border-primary/20 bg-white dark:bg-primary/5 focus:border-primary h-14 placeholder:text-slate-400 dark:placeholder:text-primary/30 pl-12 pr-4 text-base font-normal leading-normal transition-all" placeholder="Enter your city" type="text" value=""/>
+</div>
+</label>
+</div>
+</div>
+<!-- Spacer for Push to Bottom -->
+<div class="flex-1"></div>
+<!-- Action Button -->
+<div class="flex py-8 mt-auto">
+<button class="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 flex-1 bg-primary hover:bg-primary/90 text-background-dark text-base font-bold leading-normal tracking-[0.05em] shadow-xl shadow-primary/10 transition-all uppercase">
+<span class="truncate">Complete Profile</span>
+</button>
+</div>
+</div>
+<!-- Decorative element -->
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-primary/5 rounded-full blur-[80px] pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-64 h-64 bg-primary/5 rounded-full blur-[80px] pointer-events-none"></div>
+</div>
+</body></html>
